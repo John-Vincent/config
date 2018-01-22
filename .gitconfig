@@ -1,0 +1,7 @@
+[user]
+	name = jvincent
+	email = jvincent@iastate.edu
+[http]
+	sslVerify = true
+[color]
+	ui = auto

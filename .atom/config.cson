@@ -1,0 +1,52 @@
+"*":
+  core:
+    disabledPackages: [
+      "autocomplete-plus"
+      "spell-check"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "*.class"
+    ]
+    telemetryConsent: "limited"
+  docblockr:
+    extra_tags: [
+      "@author Collin Vincent collinvincent96@gmail.com"
+      "@date {{datetime}}"
+    ]
+    extra_tags_go_after: true
+    return_description: false
+  editor:
+    atomicSoftTabs: false
+    autoIndentOnPaste: false
+    fontSize: 13
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "0c0b635c-565a-8840-1914-10ed29944f2b"
+  latex:
+    texPath: "/usr/bin/"
+  pigments: {}
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "text.tex.latex"
+    ]
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+  wordcount:
+    alwaysOn: true
