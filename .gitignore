@@ -1,0 +1,24 @@
+# Ignore everything
+*
+
+# Except for these files
+!.bashrc
+!.vimrc
+!.gitconfig
+!.ssh
+!.ssh/config
+!.atom
+!.atom/*
+!.gitignore
+
+# But actually these files
+.atom/storage
+.atom/compile-cache
+.atom/dev
+.atom/npm
+.atom/.node-gyp
+.atom/blob-store
+.atom/apm
+.atom/packages
+.atom/atom-shell
+.atom/nohup.out
