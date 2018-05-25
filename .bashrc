@@ -167,6 +167,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-export PATH=$PATH:.:~/bin
+export PATH=$PATH:.:~/bin:~/.npm-global/bin
 export VISUAL=vim
 export EDITOR="$VISUAL"
