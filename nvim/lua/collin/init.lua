@@ -1,18 +1,15 @@
 require('collin.remap')
-require('collin.lazy_init')
 require('collin.set')
+require('collin.lazy_init')
+require('collin.colorscheme')
 
-vim.cmd.colorscheme 'habamax'
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.undofile = true
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 
-vim.cmd.colorscheme 'habamax'
-
-
 local augroup = vim.api.nvim_create_augroup
-local CollinGroup = augroup('ThePrimeagen', {})
+local CollinGroup = augroup('CollinRemappings', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -40,12 +37,12 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
-autocmd('filetype', {
+autocmd('Filetype', {
   group = CollinGroup,
   pattern = 'netrw',
   callback = function(e)
     local opts = { buffer = e.buf }
-    vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
+    vim.keymap.set("n", "<C-l>", "<C-l>", opts)
   end
 })
 

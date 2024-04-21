@@ -1,4 +1,5 @@
 tmux/plugins
+nvim/lua/collin/colorscheme.lua
 lazy-log.json
 
 fish
