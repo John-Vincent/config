@@ -37,12 +37,12 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
-autocmd('Filetype', {
+autocmd('FileType', {
   group = CollinGroup,
   pattern = 'netrw',
   callback = function(e)
     local opts = { buffer = e.buf }
-    vim.keymap.set("n", "<C-l>", "<C-l>", opts)
+    vim.keymap.set("n", "<C-l>", "<C-w><C-l>", opts)
   end
 })
 
