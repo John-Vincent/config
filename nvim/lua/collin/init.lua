@@ -1,7 +1,6 @@
 require('collin.remap')
 require('collin.set')
 require('collin.lazy_init')
-require('collin.colorscheme')
 
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.undofile = true
