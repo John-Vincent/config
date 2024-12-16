@@ -3,7 +3,6 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Vex)
 vim.keymap.set("n", "<leader>ps", vim.cmd.Sex)
 vim.keymap.set("n", "<leader>pe", vim.cmd.Ex)
 
-
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
@@ -11,7 +10,7 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("n", "<leader>j", "mzJ`z")
+
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -32,9 +31,9 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "J", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "K", "<cmd>cprev<CR>zz")
 
-
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+  vim.cmd("so /Users/cvincent/.config/nvim/init.lua")
+  print('sourced init.lua')
 end)
 
 

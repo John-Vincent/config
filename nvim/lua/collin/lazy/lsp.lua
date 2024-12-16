@@ -16,6 +16,7 @@ return {
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
+        local lspconfig = require("lspconfig")
         local capabilities = vim.tbl_deep_extend(
             "force",
             {},
@@ -40,21 +41,23 @@ return {
                 end,
 
                 ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
-                        capabilities = capabilities,
-                        settings = {
-                            Lua = {
-				    runtime = { version = "Lua 5.1" },
-                                diagnostics = {
-                                    globals = { "vim", "it", "describe", "before_each", "after_each" },
-                                }
-                            }
+                  local lspconfig = require("lspconfig")
+                  lspconfig.lua_ls.setup {
+                    capabilities = capabilities,
+                    settings = {
+                      Lua = {
+                        runtime = { version = "Lua 5.1" },
+                        diagnostics = {
+                            globals = { "vim", "it", "describe", "before_each", "after_each" },
                         }
+                      }
                     }
+                  }
                 end,
             }
         })
+
+        lspconfig.flow.setup {}
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
