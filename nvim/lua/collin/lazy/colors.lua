@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "habamax"
+	color = color or "catppuccin-mocha"
 	vim.cmd.colorscheme(color)
 
   -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -91,7 +91,7 @@ return {
             },
         },
       })
-      ColorMyPencils()
+      ColorMyPencils(vim.env.COLOR_SCHEME)
     end
   },
 }
