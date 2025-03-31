@@ -62,3 +62,13 @@ autocmd('LspAttach', {
     end
 })
 
+---[[Code required to activate autocompletion when supported
+autocmd('LspAttach', {
+  callback = function(args)
+    local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+    if client:supports_method('textDocument/completion') then
+      vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = false })
+    end
+  end,
+})
+---]]

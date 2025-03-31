@@ -34,7 +34,6 @@ return {
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
@@ -56,8 +55,6 @@ return {
                 end,
             }
         })
-
-        lspconfig.flow.setup {}
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
@@ -83,6 +80,7 @@ return {
 
         vim.diagnostic.config({
             -- update_in_insert = true,
+            virtual_lines = { current_line = true },
             float = {
                 focusable = false,
                 style = "minimal",
