@@ -1,6 +1,10 @@
+*
+!*/
+!tmux/*
+!nvim/*
+!waybar/*
+!wofi/*
+!hypr/*
+!.gitignore
 tmux/plugins
-lazy-log.json
-
-fish
-htop
-yarn
+nvim/lua/collin/colorscheme.lua
