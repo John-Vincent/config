@@ -16,7 +16,6 @@ return {
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
-        local lspconfig = require("lspconfig")
         local capabilities = vim.tbl_deep_extend(
             "force",
             {},
@@ -80,7 +79,7 @@ return {
 
         vim.diagnostic.config({
             -- update_in_insert = true,
-            virtual_lines = { current_line = true },
+            virtual_text = { current_line = true },
             float = {
                 focusable = false,
                 style = "minimal",
