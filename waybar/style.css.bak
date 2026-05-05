@@ -1,0 +1,85 @@
+@import "mocha.css";
+
+@define-color flavor @flamingo;
+
+window#waybar {
+    font-family: "JetBrains Mono NerdFont";
+    background-color: transparent;
+    color: @flavor;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.modules-left, .modules-center {
+    opacity: 1;
+    border-radius: 0.5rem;
+    padding: 2px;
+}
+
+.modules-right {
+    opacity: 1;
+    background: @mantle;
+    opacity: 1;
+    border-radius: 0.5rem;
+    padding: 2px 2px 2px 10px
+}
+
+/* label.module {
+    margin-left: -1px;
+} */
+
+#workspaces {
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid @subtext0;
+    padding: 0 2px;
+}
+
+#workspaces button {
+    font-size: 0.6rem;
+    padding: 0 0.3rem 0 0;
+    color: @surface2;
+}
+
+#window {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0.5rem;
+    padding: 2px 5px;
+}
+
+#clock {
+  color: @flavor;
+  border-radius: 20px;
+  margin-left: 5px;
+  border-right: 0px;
+  transition: 0.1s;
+  padding-right: 13px;
+  padding-left: 13px;
+  border: 2px solid @flavor;
+}
+
+#wireplumber {
+  color: @blue;
+  border: 2px solid @blue;
+  border-radius: 20px 0 0 20px;
+  margin-right: 0px;
+  padding-right: 10px;
+}
+
+#memory {
+  border-bottom: 2px solid @theme;
+  border-top: 2px solid @theme;
+  border-right: 2px solid @theme; /* remove those three lines if you have a battery */
+  border-radius: 0 20px 20px 0;
+  margin-right: 5px;
+}
+
+#cpu {
+  border-radius: 20px 0 0 20px;
+  border-left: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
+  border-top: 2px solid @flavor;
+}
+
+#temperature {
+    color: lightslategray;
+}
