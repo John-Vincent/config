@@ -4,7 +4,7 @@
 !nvim/*
 !waybar/*
 !wofi/*
-!hypr/*
+!hypr/**
 !.gitignore
 tmux/plugins
 nvim/lua/collin/colorscheme.lua

@@ -1,0 +1,5 @@
+hl.on("hyprland.start", function()
+  hl.dsp.workspace.move({ workspace = 1, monitor = 0 })
+  hl.exec_cmd('uwsm app -- firefox', { workspace = 1 })
+  hl.exec_cmd('uwsm app -- ghostty', { workspace = 0 })
+end)
