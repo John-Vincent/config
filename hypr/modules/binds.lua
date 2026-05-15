@@ -3,12 +3,21 @@ local terminal = "ghostty"
 local menu = "wofi -H 400 -W 600 --show drun --insensitive -I"
 
 -- discord passthrough
-hl.bind("XF86TouchpadToggle", hl.dsp.pass({ window = "class:discord" }))
+hl.bind("XF86TouchpadToggle", hl.dsp.pass({ window = "class:discord" }),
+  { ignore_mods = true, non_consuming = true })
+hl.bind("XF86TouchpadToggle", hl.dsp.pass({ window = "class:discord" }),
+  { ignore_mods = true, release = true, non_consuming = true })
+
+-- testing bind
+-- hl.bind("XF86TouchpadToggle", hl.dsp.pass({ window = "class:wev" }),
+--  { ignore_mods = true, non_consuming = true })
+-- hl.bind("XF86TouchpadToggle", hl.dsp.pass({ window = "class:wev" }),
+--  { ignore_mods = true, release = true, non_consuming = true })
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("uwsm app -- " .. terminal))
-hl.bind(mainMod .. " + C", hl.dsp.window.kill())
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("uwsm app -- " .. menu))
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("lock-screen"))
 
