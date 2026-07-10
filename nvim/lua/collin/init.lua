@@ -2,12 +2,6 @@ require('collin.remap')
 require('collin.set')
 require('collin.lazy_init')
 
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.undofile = true
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_bufsettings = 'noma nomod number nowrap ro nobl'
-
 local augroup = vim.api.nvim_create_augroup
 local CollinGroup = augroup('CollinRemappings', {})
 

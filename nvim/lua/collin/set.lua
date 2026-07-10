@@ -20,5 +20,8 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_bufsettings = 'noma nomod number nowrap ro nobl'
 
 vim.opt.scrolloff = 10
